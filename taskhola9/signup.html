@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp page</title>
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+           <div class="logo"><a href="#">LOGO</a></div>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <button class="btn"><a href="login.html" >Login</a></button>
+                <button class="btn"><a href="signup.html" >SignUp</a></button>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="registration">
+        <div class="form-content">
+                <h1>Sign Up</h1>
+            <form action="#" >
+            <div class="field input-field">
+                <input type="text" name="userNote" id="username" placeholder=" Username" class="input">
+            </div>
+           
+            <div class="field input-field">
+                <input type="email" name="email" id="email" placeholder="Email address" class="input">
+            </div>
+            
+            <div class="field input-field">
+                <input type="password" name="password" id="password" placeholder=" Password" class="input" >
+                
+            </div>
+            
+            <div class="field button">
+                <button type="button" onclick="saveData()" id= "save_btn">SignUp</button>
+            </div>
+            <div class="form-link">
+                <span>Already a member? <a href="login.html">Login</a></span>
+            </div>
+            </form>
+        </div>   
+    </section>
+
+<script>
+    function saveData(){
+        let username, email, password;
+        username=document.getElementById("username").value;
+        email=document.getElementById("email").value;
+        password=document.getElementById("password").value;
+        
+       //localStorage.setItem("username",username);
+       //localStorage.setItem("email",email);
+       //localStorage.setItem("password",password);
+
+       let user_records=new Array();
+       user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+       if(user_records.some((v)=>{
+        return v.email==email
+    })){
+        alert("duplicate data");
+       }
+       else{
+        user_records.push({
+            "username":username,
+            "email":email,
+            "password":password,
+        })
+        localStorage.setItem("users",JSON.stringify(user_records));
+       }
+       }
+    
+
+</script>
+
+</body>
+</html>

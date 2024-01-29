@@ -1,0 +1,266 @@
+*{
+    margin: 0%;
+    padding:0%;
+    box-sizing: border-box;
+}
+
+.navbar{
+    background-color: rgb(68, 8, 124);
+    padding:25px;
+    position: sticky;
+    top: 0;
+    z-index: 0;
+}
+.navdiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo a{
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+}
+ul li {
+    display: inline-block;
+}
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    margin: auto;
+    margin-right: 25px;
+} 
+.btn{
+    background-color:blueviolet;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    width: 150px;
+    padding: 15px;
+    margin-right: 25px;
+    border-radius: 10px;
+}
+.btn a{
+    text-decoration: none;
+    color:white;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.bg{
+	width:100%;
+	height:639px;
+	background-image:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url("bg.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color:white;
+	text-align: center;
+    margin: auto;
+    position: relative;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg-content h1{
+    font-size: 54px;
+    font-weight: bold;  
+    margin-bottom: 30px; 
+}
+.bg-content p{
+    font-size: 24px;
+    font-weight: 400;
+}
+@media(max-width:700px){
+    .bg-content h1{
+        font-size: 44px;
+    }
+    .bg-content p{
+        font-size: 18px;
+    }
+}
+
+/* Sign UP form */
+.registration{
+    height: 90vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(165, 165, 214);
+}
+.form-content{
+    max-width: 450px;
+    width:100%;
+    padding:30px;
+    border-radius: 0;
+    background-color: #fff;
+}
+.form-content h1{
+    text-align: center;
+    font-size: 28px;
+    font-weight: 400;
+}
+.input-field{
+    height: 100%;
+    width:100%;
+    margin-top: 30px;
+}
+form{
+    margin:35px;
+}
+form .field{
+    position: relative;
+    height:45px;
+    width: 100%;
+    margin-top: 30px;
+}
+.field input, .field button{
+    height: 100%;
+    width: 100%;
+    border:none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 4px;
+}
+.field button{
+    background-color: #0171d3;
+    color: white;
+}
+.field button:hover{
+    background-color: blueviolet;
+    color:rgb(244, 238, 238);
+}
+.field input{
+    padding: 0 15px;
+    border:1px solid #cacaca;
+}
+
+.form-link{
+    text-align: center;
+    margin-top:30px;
+}
+.form-link span, .form-link  a{
+    font-size: 18px;
+    font-weight: 400;
+}
+.form-link a{
+    text-decoration: none;
+}
+.form-link a:hover{
+    text-decoration: underline;
+}
+
+/*login */
+
+.login{
+    height: 90vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(165, 165, 214);
+}
+
+    
+@media only screen and (max-width: 600px) and (min-width: 400px)   {
+  
+    .navbar{
+        background-color: rgb(68, 8, 124);
+        padding: 8px;
+        position: sticky;
+        top: 0;
+        z-index: 0;
+        float: none;
+        display: block;
+        padding-bottom: 20px;
+    }
+    .navdiv{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo a{
+        font-size: 24px;
+        font-weight: 800;
+        color: white;
+        text-decoration: none;
+        margin-left: 30px;
+    }
+    ul li {
+        display: inline-block;
+    }
+    ul li a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        margin: auto;
+        margin-right: 25px;
+    } 
+    .btn{
+        background-color:blueviolet;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        width: 150px;
+        padding: 15px;
+        margin-right: 25px;
+        border-radius: 10px;
+        display:flex;
+        margin-top: 5px;
+            padding-left: 50px;
+
+    }
+    .btn a{
+        text-decoration: none;
+        color:white;
+        font-size: 16px;
+        font-weight: 600;
+        
+    }
+    
+    .bg{
+        width:100%;
+        height:640px;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url("bg.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color:white;
+        text-align: center;
+        margin: auto;
+        position: static;
+    }
+    .bg-content{
+    margin-top: -60px;
+    }
+   
+.registration {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(165, 165, 214);
+}
+.login{
+    height: 80vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(165, 165, 214);
+}
+
+}
+body{
+    overflow: hidden;
+}

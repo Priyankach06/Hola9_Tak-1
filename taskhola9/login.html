@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+           <div class="logo"><a href="#">LOGO</a></div>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <button class="btn"><a href="login.html" >Login</a></button>
+                <button class="btn"><a href="signup.html" >SignUp</a></button>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="login">
+        <div class="form-content">
+                <h1>login</h1>
+            <form action="#">
+            <div class="field input-field">
+                <input type="email" name="email" id="email" placeholder="Email address" class="input" >
+            </div>
+            <p id="emailNote"></p>
+            <div class="field input-field">
+                <input type="password" name="password" id="password" placeholder="Password" class="input">
+            </div>
+            <span id="passwordNote"></span>
+            <div class="field button-field">
+                <button type="button" onclick="saveData()" id="save_btn">Login</button>
+            </div>
+            <div class="form-link">
+                <span>Don't have an account? <a href="signup.html">Sign up</a></span>
+            </div>
+            </form>
+        </div>   
+    </section>
+
+<script>
+    function saveData(){
+        let email,password;
+        email=document.getElementById("email").value;
+        password=document.getElementById("password").value;
+
+        let user_record=new Array();
+        user_record=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+        if(user_record.some((v)=>{
+            return v.email==email && v.password==password
+        })){
+            alert("Login Successful");
+            let current_user=user_record.filter((v)=>{
+                return v.email==email && v.password==password
+            })[0]
+        }
+        else{
+            alert('Login Fail Try Again');
+        }
+    } 
+</script>
+
+</body>
+</html>
